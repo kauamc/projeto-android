@@ -49,10 +49,27 @@ header > div > h2 {
 }
 
 nav {
+    display: block;
     background-color: var(--tom-verde-2);
     padding: 5px;
     text-align: center;
 }
+
+    #menu-icon {
+        display: none;
+        background-color: var(--tom-verde-2);
+        color: white;
+        padding: 5px;
+    }
+
+    #menu-icon:hover {
+        cursor: pointer;
+        background-color: var(--tom-verde-1);
+    }
+
+    #menu-icon:active {
+        background-color: var(--tom-verde-1);
+    }
 
     nav > a {   
         color: white;
@@ -70,9 +87,14 @@ nav {
     }
 
     @media (max-width: 360px){
-        nav a {
+        nav#menu {
+            display: none;
+        }
+        nav#menu a {
             display: block;
-            text-align: left;
+        }
+        #menu-icon {
+            display: block;
         }
     }
 
